@@ -2,7 +2,7 @@ class Symbol:
 
     icon_options = ['♥',' ♦', '♣', '♠']
 
-    def init(self, color, icon):
+    def __init__(self, color, icon):
 
         self.color = color
         self.icon = icon
@@ -14,8 +14,8 @@ class Card(Symbol):
 
     value_options = ['A','2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
 
-    def init(self, color, icon, value):
-        Symbol.init(self, color, icon)
+    def __init__(self, color, icon, value):
+        Symbol.__init__(self, color, icon)
         self.value = value
 
     def str (self):
@@ -23,4 +23,4 @@ class Card(Symbol):
 
 
 myCard = Card("red",'♥', '10')
-print(myCard)
+print(myCard.str())
